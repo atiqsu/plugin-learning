@@ -1,3 +1,4 @@
+import React from "react";
 const {useState} = React;
 
 const FormComponent = () =>{
@@ -18,49 +19,60 @@ const FormComponent = () =>{
     }
 
     const renderInput = (label, field, type = 'text') => {
-        return React.createElement('div', {className: 'form-group'},[
-            React.createElement('label', {htmlFor: field, key:`${field}-label`, label}),
-            React.createElement('input', {
-                key: `${field}-input`,
-                type,
-                id: field,
-                value: formData[field],
-                onChange: handleChange(field),
-                className: 'form-control',
-            }),
-        ]);
+        return React.createElement(
+            React.Fragment,
+            {key: `${field}-wrapper`},
+            [
+                React.createElement('div', { className: 'form-group', key: `${field}-group` }, [
+                    React.createElement('label', {htmlFor: field, key: `${field}-label`}, label),
+                    React.createElement('input', {
+                        key: `${field}-input`,
+                        type,
+                        id: field,
+                        value: formData[field],
+                        onChange: handleChange(field),
+                        className: 'form-control',
+                    }),
+                ]),
+            ]
+        );
     };
 
     const rederTextArea = (label, field) => {
-        return React.createElement('div', {className: 'form-group'}, [
-            React.createElement('label', { htmlFor: field, key: `${field}-label` }, label),
-            React.createElement('textarea', {
-                key:`${field}-textarea`,
-                id: field,
-                value: formData[field],
-                onChange: handleChange(field),
-                className: 'form-control',
-                rows: 4,
-            }),
-        ]);
+        return React.createElement(
+            React.Fragment,
+            {key: `${field}-wrapper`},
+            [
+                React.createElement('div', {className: 'form-group', key: `${field}-group`}, [
+                    React.createElement('label', { htmlFor: field, key: `${field}-label` }, label),
+                    React.createElement('textarea', {
+                        key: `${field}-textarea`,
+                        id: field,
+                        value: formData[field],
+                        onChange: handleChange(field),
+                        className: 'form-control',
+                        rows: 4,
+                    }),
+                ]),
+            ]
+        );
     };
 
     return React.createElement(
         'form',
-        {onSubmit: handleChange},
+        {onSubmit: handleSubmit},
         [
-            renderInput('Name', name),
-            renderInput('Username', username),
-            renderInput('Email', email),
-            rederTextArea('Message', message),
+            renderInput('Name', 'name'),
+            renderInput('Username', 'username'),
+            renderInput('Email', 'email'),
+            rederTextArea('Message', 'message'),
             React.createElement(
                 'button', 
-                {type: 'submit', className: 'submit-button'},
+                {type: 'submit', className: 'submit-button', key: 'submit-button'},
                 'Submit'
             ),
         ]
     );
-
 };
 export default FormComponent;
 

@@ -1,9 +1,7 @@
-import React, {useState} from "react";
-
-import ReactDOM from 'react-dom';
+import React, { useState } from "react";
+import { createRoot } from "react-dom/client";
 
 import '../scss/main.scss';
-
 import FormComponent from '../components/FormComponent';
 
 const App = () => {
@@ -26,11 +24,11 @@ const App = () => {
 
     return React.createElement(
         'div',
-        {className: 'plugin-dashboard'},
+        { className: 'plugin-dashboard' },
         React.createElement(
             'div',
-            {className: 'tabs'},
-            tabs.map((tab) => 
+            { className: 'tabs' },
+            tabs.map((tab) =>
                 React.createElement(
                     'button',
                     {
@@ -42,23 +40,20 @@ const App = () => {
                 )
             )
         ),
-        React.createElement('div', {className: 'tab-content'}, renderContent())
-
+        React.createElement('div', { className: 'tab-content' }, renderContent())
     );
 };
 
-ReactDOM.render(
-    React.createElement(App),
-    document.getElementById('react-dashboard')
-);
-
+// DOM mount points
 const rootAdmin = document.getElementById('react-dashboard');
 const rootFrontend = document.getElementById('react-user-form');
 
-if(rootAdmin) {
-    ReactDOM.render(React.createElement(App), rootAdmin);
+if (rootAdmin) {
+    const root = createRoot(rootAdmin);
+    root.render(React.createElement(App));
 }
 
-if(rootFrontend){
-    ReactDOM.render(React.createElement(FormComponent), rootFrontend);
+if (rootFrontend) {
+    const root = createRoot(rootFrontend);
+    root.render(React.createElement(FormComponent));
 }

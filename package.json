@@ -23,5 +23,16 @@
     "style-loader": "^3.3.3",
     "webpack": "^5.99.0",
     "webpack-cli": "^5.1.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atiqsu/plugin-learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atiqsu/plugin-learning/issues"
+  },
+  "homepage": "https://github.com/atiqsu/plugin-learning#readme"
 }
