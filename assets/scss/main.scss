@@ -1,0 +1,31 @@
+.plugin-dashboard {
+    padding: 20px;
+    font-family: sans-serif;
+  
+    .tabs {
+      margin-bottom: 15px;
+  
+      .tab-button {
+        background: #f1f1f1;
+        border: 1px solid #ccc;
+        margin-right: 8px;
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 4px;
+  
+        &.active {
+          background-color: #007cba;
+          color: #fff;
+          border-color: #007cba;
+        }
+      }
+    }
+  
+    .tab-content {
+      border: 1px solid #ddd;
+      padding: 20px;
+      background: #fff;
+      border-radius: 4px;
+    }
+  }
+  

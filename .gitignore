@@ -1,0 +1,29 @@
+# Node.js dependencies
+node_modules/
+
+# Build output (compiled JS, CSS)
+build/
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+
+# Babel & Webpack cache (optional)
+.cache/
+.tmp/
+
+# VS Code config (if using VS Code)
+.vscode/
+
+# Environment/config files (if you use them later)
+.env
+.env.local
+.env.*.local
+
+# Optional: lock files (depends on team policy)
+package-lock.json
+yarn.lock
+
+.babelrc
