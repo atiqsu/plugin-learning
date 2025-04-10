@@ -49,8 +49,8 @@ class FormEndPoint {
             }
     
             $db = new \MyReactPlugin\Database\FormTableCreator();
-            $db->createGeneralDataTable();
-            $inserted = $db->insertGeneralData($name, $username, $email, $message);
+            $db->createNestedFormDataTable('General');
+            $inserted = $db->insertToNestedFormTable('General', $name, $username, $email, $message);
     
             if ($inserted) {
                 return new \WP_REST_Response(['message' => 'Form submitted successfully']);
