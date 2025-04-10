@@ -56,9 +56,9 @@ add_action('admin_enqueue_scripts', function ($hook) {
   wp_enqueue_script('my-react-plugin-js', $plugin_url . 'build/bundle.js', [], null, true);
   wp_enqueue_style('my-react-plugin-css', $plugin_url . 'build/styles.css');
 
-  wp_localize_script('my-react-plugin-js', 'swiss_ajax', [
-    'ajax_url' => admin_url('admin-ajax.php'),
-    'nonce' => wp_create_nonce('form_data_nonce'),
+  wp_localize_script('my-react-plugin-js', 'myPluginData', [
+    'rest_url' => esc_url_raw(rest_url()),
+    'nonce' => wp_create_nonce('wp_rest')
   ]);
 });
 

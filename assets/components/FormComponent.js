@@ -15,8 +15,24 @@ const FormComponent = () =>{
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        console.log('Subitted: ', formData);
-    }
+        // console.log('Subitted: ', formData);
+        
+        fetch(`${myPluginData.rest_url}my-plugin/v1/submit-form`, {
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json',
+                'X-WP-Nonce' : myPluginData.nonce
+            },
+            body: JSON.stringify(formData),
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log('API Response:', data.message);
+        })
+        .catch((error) => {
+            console.log('Error:', error);
+        })
+    };
 
     const renderInput = (label, field, type = 'text') => {
         return React.createElement(
