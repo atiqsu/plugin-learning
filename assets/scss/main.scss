@@ -1,31 +1,46 @@
-.plugin-dashboard {
-    padding: 20px;
-    font-family: sans-serif;
-  
-    .tabs {
-      margin-bottom: 15px;
-  
-      .tab-button {
-        background: #f1f1f1;
-        border: 1px solid #ccc;
-        margin-right: 8px;
-        padding: 8px 16px;
-        cursor: pointer;
-        border-radius: 4px;
-  
-        &.active {
-          background-color: #007cba;
-          color: #fff;
-          border-color: #007cba;
-        }
-      }
-    }
-  
-    .tab-content {
-      border: 1px solid #ddd;
-      padding: 20px;
-      background: #fff;
-      border-radius: 4px;
-    }
-  }
-  
+.tab-wrapper {
+  font-family: sans-serif;
+  background: #1e1e1e;
+  padding: 20px;
+  color: #ccc;
+}
+
+.tab-buttons {
+  display: flex;
+  border-bottom: 1px solid #444;
+}
+
+.tab-buttons button {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  color: #6cb4ff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-buttons button:hover {
+  color: #fff;
+}
+
+.tab-buttons .active {
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #6cb4ff;
+}
+
+.tab-content {
+  padding: 20px 0;
+  font-size: 18px;
+  color: #e0e0e0;
+}
+.plugin-dashboard.light-mode {
+  background: #ffffff;
+  color: #222;
+}
+.plugin-dashboard.dark-mode {
+  background: #1e1e1e;
+  color: #ddd;
+}
