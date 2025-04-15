@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProfileTab() {
   return (
-    <div>This is Profile Tab</div>
+    <h2>This is Profile Tab</h2>
   )
 }
 

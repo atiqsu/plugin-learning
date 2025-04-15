@@ -1,0 +1,107 @@
+#react-dashboard{
+  margin: 20px 20px 0 0;
+}
+
+.tab-wrapper {
+  padding: 20px 30px;
+}
+
+.tab-buttons {
+  display: flex;
+  margin-bottom: 20px;
+  // gap: 20px;
+  // border-bottom: 1px solid #ccc;
+}
+
+.tab-buttons button {
+  padding: 16px 48px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #0dc5ff;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab-buttons button.active {
+  background-color: #3a3a3a;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.tab-panel {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  margin-top: -1px;
+}
+
+.tab-wrapper.dark-mode .tab-buttons button.active {
+  background-color: #3a3a3a;
+  color: white;
+  border-color: gray;
+}
+.plugin-dashboard.light-mode .tab-buttons button.active{
+  background-color: #fff;
+  color: #222;
+}
+.tab-wrapper.dark-mode .tab-panel {
+  background-color: #2a2a2a;
+  color: white;
+  border-color: gray;
+}
+.plugin-dashboard.light-mode {
+  background: #f0f0f0;
+  color: #222;
+}
+.plugin-dashboard.dark-mode {
+  background: #4d4f52;
+  color: #fff;
+}
+
+h2{
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.plugin-dashboard.dark-mode h2{
+  color: #fff;
+}
+.plugin-dashboard.dark-mode .settings-tab label{
+  color: #222;
+}
+.settings-tab{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .settings-control{
+    max-width: 650px;
+    width: 100%;
+    background: #fff;
+    padding: 24px 36px; 
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    label{
+      font-size: 15px;
+    }
+  
+    select {
+        padding: 5px 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 15px;
+        max-width: 100px;
+        width: 100%;
+    }
+  }
+  
+}

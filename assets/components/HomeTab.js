@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeTab = () => {
   return (
-    <div>This is Home Tab</div>
+    <h2>This is Home Tab</h2>
   )
 }
 

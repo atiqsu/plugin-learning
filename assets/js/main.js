@@ -16,7 +16,7 @@ const App = () => {
 
     return (
         <div className={`plugin-dashboard ${displayMode}-mode`}>
-            <DisplayModeToggle onChange={setDisplayMode} />
+            {/* <DisplayModeToggle onChange={setDisplayMode} /> */}
             <Tabs>
                 <Tab name="Home">
                     <HomeTab />
@@ -28,7 +28,7 @@ const App = () => {
                     <ContactTab />
                 </Tab>
                 <Tab name="Settings">
-                    <SettingsTab />
+                    <SettingsTab displayMode={displayMode} setDisplayMode={setDisplayMode} />
                 </Tab>
             </Tabs>
         </div>

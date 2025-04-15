@@ -91,26 +91,30 @@ const ContactTab = () =>{
     // );
 
     return (
-        <form>
-            <div className="form-group">
-                <label>Name</label>
-                <input type="text" value={formData.name} onChange={handleChange('name')} />
+        <form className="contact-form">
+            <div className="contact-wrapper">
+                <div className="input-field">
+                    <div className="form-group">
+                        <label>Name</label>
+                        <input type="text" value={formData.name} placeholder="Enter your name..." onChange={handleChange('name')} />
+                    </div>
+                    <div className="form-group">
+                        <label>Username</label>
+                        <input type="text" value={formData.username} placeholder="Username..." onChange={handleChange('username')} />
+                    </div>
+                    <div className="form-group">
+                        <label>Email</label>
+                        <input type="email" value={formData.email} placeholder="Enter your email..." onChange={handleChange('email')} />
+                    </div>
+                </div>
+                <div className="form-group">
+                    <label>Message</label>
+                    <textarea value={formData.message} placeholder="Describe your review..." onChange={handleChange('message')} />
+                </div>
             </div>
-            <div className="form-group">
-                <label>Username</label>
-                <input type="text" value={formData.username} onChange={handleChange('username')} />
-            </div>
-            <div className="form-group">
-                <label>Email</label>
-                <input type="email" value={formData.email} onChange={handleChange('email')} />
-            </div>
-            <div className="form-group">
-                <label>Message</label>
-                <textarea value={formData.message} onChange={handleChange('message')} />
-            </div>
-            <button type="submit">Submit</button>
+            
+            <button className="submit-btn" type="submit">Submit</button>
         </form>
     );
 };
 export default ContactTab;
-
