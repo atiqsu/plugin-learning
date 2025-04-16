@@ -1,6 +1,4 @@
-# Update the README again to include a detailed "How to Run This Plugin" section
-
-detailed_instructions = """
+# "How to Run This Plugin" section -- detailed_instructions
 
 ## ▶️ How to Run This Plugin (Step-by-Step)
 
